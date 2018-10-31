@@ -17,37 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-ts-J0p">
-                                <rect key="frame" x="44" y="290" width="326" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-57-5bs">
-                                <rect key="frame" x="118" y="414" width="178" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHx-1v-S1H">
-                                <rect key="frame" x="44" y="112" width="326" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-gU-4QD">
+                                <rect key="frame" x="30" y="166" width="354" height="404"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHx-1v-S1H">
+                                        <rect key="frame" x="10" y="0.0" width="334" height="104"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="104" id="LwC-xF-Cst"/>
+                                            <constraint firstAttribute="width" secondItem="RHx-1v-S1H" secondAttribute="height" multiplier="89:46" id="sIY-55-dZh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sIY-55-dZh"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-ts-J0p">
+                                        <rect key="frame" x="10" y="204" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="npY-9d-gsM"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-57-5bs">
+                                        <rect key="frame" x="80" y="354" width="194" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ll9-CI-j3d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RHx-1v-S1H" secondAttribute="trailing" constant="10" id="2DT-sX-vgz"/>
+                                    <constraint firstItem="RHx-1v-S1H" firstAttribute="leading" secondItem="1VR-gU-4QD" secondAttribute="leading" constant="10" id="Auq-q9-Hkj"/>
+                                    <constraint firstItem="9ds-57-5bs" firstAttribute="leading" secondItem="1VR-gU-4QD" secondAttribute="leading" constant="80" id="RHE-ZJ-qJa"/>
+                                    <constraint firstItem="ASc-ts-J0p" firstAttribute="leading" secondItem="1VR-gU-4QD" secondAttribute="leading" constant="10" id="ds5-ay-dPB"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ds-57-5bs" secondAttribute="trailing" constant="80" id="hGK-W6-0Ks"/>
+                                    <constraint firstAttribute="trailing" secondItem="ASc-ts-J0p" secondAttribute="trailing" constant="10" id="yTg-Zn-0bT"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1VR-gU-4QD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbZ-3u-79b"/>
+                            <constraint firstItem="1VR-gU-4QD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GdG-lJ-fNw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1VR-gU-4QD" secondAttribute="trailing" constant="30" id="XFk-gz-DDP"/>
+                            <constraint firstItem="1VR-gU-4QD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cJU-dd-kdP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336" y="126"/>
+            <point key="canvasLocation" x="-336.23188405797106" y="125.54347826086958"/>
         </scene>
         <!--SecondViewController-->
         <scene sceneID="LzV-eH-Sdc">
@@ -57,37 +88,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-Nq-Se4">
-                                <rect key="frame" x="44" y="290" width="326" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-08-Vcv">
-                                <rect key="frame" x="44" y="112" width="326" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-PM-RPe">
-                                <rect key="frame" x="118" y="414" width="178" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-kz-cpV">
+                                <rect key="frame" x="30" y="166" width="354" height="404"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-08-Vcv">
+                                        <rect key="frame" x="10" y="0.0" width="334" height="104"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="104" id="afT-XB-Nxx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-Nq-Se4">
+                                        <rect key="frame" x="10" y="204" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="yrD-KF-der"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-PM-RPe">
+                                        <rect key="frame" x="80" y="354" width="194" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Ny-iz-CCv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WA7-Nq-Se4" secondAttribute="trailing" constant="10" id="4bB-tK-On3"/>
+                                    <constraint firstItem="O1G-PM-RPe" firstAttribute="leading" secondItem="eYl-kz-cpV" secondAttribute="leading" constant="80" id="7JZ-KI-YNl"/>
+                                    <constraint firstAttribute="trailing" secondItem="O1G-PM-RPe" secondAttribute="trailing" constant="80" id="BTo-Y5-Zzu"/>
+                                    <constraint firstItem="WA7-Nq-Se4" firstAttribute="leading" secondItem="eYl-kz-cpV" secondAttribute="leading" constant="10" id="km7-lO-QwU"/>
+                                    <constraint firstAttribute="trailing" secondItem="b2d-08-Vcv" secondAttribute="trailing" constant="10" id="sDn-1y-dHZ"/>
+                                    <constraint firstItem="b2d-08-Vcv" firstAttribute="leading" secondItem="eYl-kz-cpV" secondAttribute="leading" constant="10" id="xu7-yH-gwZ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eYl-kz-cpV" firstAttribute="centerY" secondItem="rAq-zi-2Rn" secondAttribute="centerY" id="2Hv-e1-Bfl"/>
+                            <constraint firstItem="eYl-kz-cpV" firstAttribute="leading" secondItem="bQA-rp-O1e" secondAttribute="leading" constant="30" id="GbX-Px-Fhp"/>
+                            <constraint firstItem="eYl-kz-cpV" firstAttribute="centerX" secondItem="rAq-zi-2Rn" secondAttribute="centerX" id="Txe-uL-bXc"/>
+                            <constraint firstItem="bQA-rp-O1e" firstAttribute="trailing" secondItem="eYl-kz-cpV" secondAttribute="trailing" constant="30" id="xaH-uY-P4z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bQA-rp-O1e"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfZ-En-jmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="130"/>
+            <point key="canvasLocation" x="661" y="126"/>
         </scene>
     </scenes>
 </document>
