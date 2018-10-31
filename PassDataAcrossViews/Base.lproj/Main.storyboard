@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-gU-4QD">
                                 <rect key="frame" x="30" y="166" width="354" height="404"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHx-1v-S1H">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHx-1v-S1H">
                                         <rect key="frame" x="10" y="0.0" width="334" height="104"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="104" id="LwC-xF-Cst"/>
@@ -35,14 +35,14 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-ts-J0p">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter message" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-ts-J0p">
                                         <rect key="frame" x="10" y="204" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="npY-9d-gsM"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-57-5bs">
                                         <rect key="frame" x="80" y="354" width="194" height="50"/>
@@ -51,9 +51,12 @@
                                             <constraint firstAttribute="height" constant="50" id="ll9-CI-j3d"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBb-uv-wnj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -67,6 +70,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1VR-gU-4QD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbZ-3u-79b"/>
                             <constraint firstItem="1VR-gU-4QD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GdG-lJ-fNw"/>
@@ -75,6 +79,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="RHx-1v-S1H" id="wOb-2F-avy"/>
+                        <outlet property="messageTextField" destination="ASc-ts-J0p" id="F4A-he-AWU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +91,7 @@
         <!--SecondViewController-->
         <scene sceneID="LzV-eH-Sdc">
             <objects>
-                <viewController id="yhN-Vx-61x" userLabel="SecondViewController" sceneMemberID="viewController">
+                <viewController id="yhN-Vx-61x" userLabel="SecondViewController" customClass="SecondViewController" customModule="PassDataAcrossViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rAq-zi-2Rn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +99,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-kz-cpV">
                                 <rect key="frame" x="30" y="166" width="354" height="404"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-08-Vcv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-08-Vcv">
                                         <rect key="frame" x="10" y="0.0" width="334" height="104"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="104" id="afT-XB-Nxx"/>
@@ -100,14 +108,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-Nq-Se4">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter message" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-Nq-Se4">
                                         <rect key="frame" x="10" y="204" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="yrD-KF-der"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-PM-RPe">
                                         <rect key="frame" x="80" y="354" width="194" height="50"/>
@@ -116,9 +124,12 @@
                                             <constraint firstAttribute="height" constant="50" id="8Ny-iz-CCv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendMessageButton:" destination="yhN-Vx-61x" eventType="touchUpInside" id="IpJ-Nj-fC9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -140,6 +151,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bQA-rp-O1e"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="b2d-08-Vcv" id="joa-Zn-OEf"/>
+                        <outlet property="messageTextField" destination="WA7-Nq-Se4" id="Suo-Di-EfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfZ-En-jmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
