@@ -25,6 +25,15 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func sendMessageButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSecondView", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationView = segue.destination as? SecondViewController else {
+            fatalError("Destination is not SecondView")
+        }
         
+        destinationView.messageReceived = messageTextField.text!
     }
 }

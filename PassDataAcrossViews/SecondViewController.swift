@@ -4,10 +4,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextField!
+    var messageReceived = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         messageTextField.delegate = self
+        messageLabel.text = messageReceived
     }
     
     
