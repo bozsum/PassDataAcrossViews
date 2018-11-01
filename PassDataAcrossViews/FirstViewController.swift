@@ -1,6 +1,6 @@
 import UIKit
 
-class FirstViewController: UIViewController, UITextFieldDelegate {
+class FirstViewController: UIViewController, UITextFieldDelegate, Communicate {
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextField!
@@ -35,5 +35,11 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         }
         
         destinationView.messageReceived = messageTextField.text!
+        destinationView.delegate = self
+    }
+    
+    
+    func receiveMessage(message: String) {
+        messageLabel.text = message
     }
 }
