@@ -36,4 +36,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         
         destinationView.messageReceived = messageTextField.text!
     }
+    
+    @IBAction func receiveMessage(unwind: UIStoryboardSegue) {
+        guard let sourceView = unwind.source as? SecondViewController else {
+            fatalError("Source is not SecondView")
+        }
+        
+        messageLabel.text = sourceView.messageTextField.text!
+    }
 }

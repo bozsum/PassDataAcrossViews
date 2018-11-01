@@ -139,6 +139,7 @@
                                         </state>
                                         <connections>
                                             <action selector="sendMessageButton:" destination="yhN-Vx-61x" eventType="touchUpInside" id="IpJ-Nj-fC9"/>
+                                            <segue destination="100-cZ-AXM" kind="unwind" unwindAction="receiveMessageWithUnwind:" id="1I5-3A-vSG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -171,6 +172,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfZ-En-jmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="100-cZ-AXM" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="GRH-Av-yPR">
                     <connections>
                         <action selector="hideKeyboard:" destination="yhN-Vx-61x" id="qzr-EW-LdO"/>
